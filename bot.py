@@ -224,8 +224,8 @@ async def avatar(ctx, member: discord.Member=None):
 
 @bot.listen()
 async def on_message(message):
-    if message.content.lower() == 'e?support' and message.author != bot.user:
-        await message.channel.send('The support server is: https://discord.gg/GF3RWsd')
+    if message.content.lower() == 'm?support' and message.author != bot.user:
+        await message.channel.send('The support server is: https://discord.gg/FTkKFGA')
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
