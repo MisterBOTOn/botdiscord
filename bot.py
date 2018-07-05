@@ -13,7 +13,7 @@ from asyncio import sleep
 
 
 logging.basicConfig(level='INFO')
-bot = commands.Bot(command_prefix='e?')
+bot = commands.Bot(command_prefix='m?')
 bot.load_extension("admin")
 bot.remove_command('help')
 bot.load_extension("music")
@@ -92,7 +92,7 @@ async def purge(ctx, number : int):
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
 async def help(ctx):
-    await ctx.author.send("""    Empero commands:
+    await ctx.author.send("""    MisterBOT commands:
 **e?say** : Make the bot say whatever you want
 **e?ping** : Check the bot latency
 **e?search** : Search something on Google
@@ -132,7 +132,7 @@ async def help(ctx):
 @bot.listen()
 async def on_message(message : discord.Message):
     if bot.user.mentioned_in(message):
-        await message.channel.send(':sleeping: | You woke me up :( . My prefix is `e?` , for a list of commands type `e?help`', delete_after=10)
+        await message.channel.send(':sleeping: | You woke me up :( . My prefix is `m?` , for a list of commands type `m?help`', delete_after=10)
 
 @bot.listen()
 async def on_command_error(ctx, error):
@@ -231,7 +231,7 @@ async def on_message(message):
 @bot.command()
 async def invite(ctx):
     """Gives you the BOT invite link."""
-    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=459000712538357760&permissions=201603158&scope=bot")
+    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=434766536826290177&permissions=8&scope=bot")
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
@@ -343,9 +343,9 @@ async def presence():
                 if u.bot == False:
                     a = a + 1
 
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s servers | e?help' % (len(bot.guilds))))
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s servers | m?help' % (len(bot.guilds))))
         await sleep(30)
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s users | e?help' % (len(bot.users))))
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s users | m?help' % (len(bot.users))))
         await sleep(30)
 
 
@@ -361,7 +361,7 @@ async def botinfo(ctx):
     em.add_field(name="Prefix", value=ctx.bot.command_prefix, inline=True)
     em.add_field(name="Made with", value='Python 3.6.5', inline=True)
     em.add_field(name="Tag:", value=ctx.me.discriminator, inline=True)
-    em.add_field(name="Creator", value='<@404708655578218511>', inline=True)
+    em.add_field(name="Creator", value='<@320887181516210177>', inline=True)
     em.add_field(name="Created at", value=ctx.bot.user.created_at, inline=True)
     em.set_thumbnail(url=ctx.me.avatar_url)
     msg = await ctx.send(embed=em)
@@ -381,7 +381,7 @@ async def binfo(ctx):
     em.add_field(name="Prefix", value=ctx.bot.command_prefix, inline=True)
     em.add_field(name="Made with", value='Python 3.6.5', inline=True)
     em.add_field(name="Tag:", value=ctx.me.discriminator, inline=True)
-    em.add_field(name="Creator", value='<@404708655578218511>', inline=True)
+    em.add_field(name="Creator", value='<@320887181516210177>', inline=True)
     em.add_field(name="Created at", value=ctx.bot.user.created_at, inline=True)
     em.set_thumbnail(url=ctx.me.avatar_url)
     msg = await ctx.send(embed=em)
