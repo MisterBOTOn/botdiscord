@@ -93,34 +93,34 @@ async def purge(ctx, number : int):
 @bot.command()
 async def help(ctx):
     await ctx.author.send("""    MisterBOT commands:
-**e?say** : Make the bot say whatever you want
-**e?ping** : Check the bot latency
-**e?search** : Search something on Google
-**e?avatar** : Get a player's avatar
-**e?8ball** : Ask the Magic 8-Ball""")
+**m?say** : Make the bot say whatever you want
+**m?ping** : Check the bot latency
+**m?search** : Search something on Google
+**m?avatar** : Get a player's avatar
+**m?8ball** : Ask the Magic 8-Ball""")
     await ctx.author.send("""
-**e?playerinfo @<member>** : Get a member's info
-**e?serverinfo** Get a guild/server info
-**e?botinfo** : Get the bot info
-**e?lenny** : Just a lenny face
-**e?respect** : Pay #respect
-**e?support** : Returns the BOT support server""")
+**m?playerinfo @<member>** : Get a member's info
+**m?serverinfo** Get a guild/server info
+**m?botinfo** : Get the bot info
+**m?lenny** : Just a lenny face
+**m?respect** : Pay #respect
+**m?support** : Returns the BOT support server""")
     await ctx.author.send("""
-**e?kick** : Kick a member (works only if the player has the Kick perm.)
-**e?ban** : Ban a member (works only if the player has the Ban perm.)
-**e?mass** : Sends a message to all members in a guild (BOT Owner only)
-**e?shutdown** : Shuts down the bot (BOT Owner only)
-**e?purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
-**e?cat** : Something cute is going on here
+**m?kick** : Kick a member (works only if the player has the Kick perm.)
+**m?ban** : Ban a member (works only if the player has the Ban perm.)
+**m?mass** : Sends a message to all members in a guild (BOT Owner only)
+**m?shutdown** : Shuts down the bot (BOT Owner only)
+**m?purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
+**m?cat** : Something cute is going on here
 """)
     await ctx.author.send("""
-**e?play** : Play a song
-**e?stop** : Stops the track
-**e?queue** : See the following tracks
-**e?skip** : Plays the next song
-**e?pause** : Pause the track
-**e?resume** : Unpause the track
-**e?join** : Join a voice channel""")
+**m?play** : Play a song
+**m?stop** : Stops the track
+**m?queue** : See the following tracks
+**m?skip** : Plays the next song
+**m?pause** : Pause the track
+**m?resume** : Unpause the track
+**m?join** : Join a voice channel""")
     await ctx.send(f':mailbox_with_mail:  | ** {ctx.author.name} ** , check your DMs!')
 
   
