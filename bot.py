@@ -108,7 +108,7 @@ async def help(ctx):
     await ctx.author.send("""
 **m?kick** : Kick a member (works only if the player has the Kick perm.)
 **m?ban** : Ban a member (works only if the player has the Ban perm.)
-**m?mass** : Sends a message to all members in a guild (BOT Owner only)
+
 **m?shutdown** : Shuts down the bot (BOT Owner only)
 **m?purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
 **m?cat** : Something cute is going on here
