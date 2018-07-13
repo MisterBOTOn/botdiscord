@@ -13,7 +13,7 @@ from asyncio import sleep
 
 
 logging.basicConfig(level='INFO')
-bot = commands.Bot(command_prefix='m?')
+bot = commands.Bot(command_prefix='d?')
 bot.load_extension("admin")
 bot.remove_command('help')
 bot.load_extension("music")
@@ -92,35 +92,35 @@ async def purge(ctx, number : int):
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
 async def help(ctx):
-    await ctx.author.send("""    MisterBOT commands:
-**m?say** : Make the bot say whatever you want
-**m?ping** : Check the bot latency
-**m?search** : Search something on Google
-**m?avatar** : Get a player's avatar
-**m?8ball** : Ask the Magic 8-Ball""")
+    await ctx.author.send("""    DarkBot commands:
+**d?say** : Make the bot say whatever you want
+**d?ping** : Check the bot latency
+**d?search** : Search something on Google
+**d?avatar** : Get a player's avatar
+**d?8ball** : Ask the Magic 8-Ball""")
     await ctx.author.send("""
-**m?playerinfo @<member>** : Get a member's info
-**m?serverinfo** Get a guild/server info
-**m?botinfo** : Get the bot info
-**m?lenny** : Just a lenny face
-**m?respect** : Pay #respect
-**m?support** : Returns the BOT support server""")
+**d?playerinfo @<member>** : Get a member's info
+**d?serverinfo** Get a guild/server info
+**d?botinfo** : Get the bot info
+**d?lenny** : Just a lenny face
+**d?respect** : Pay #respect
+**d?support** : Returns the BOT support server""")
     await ctx.author.send("""
-**m?kick** : Kick a member (works only if the player has the Kick perm.)
-**m?ban** : Ban a member (works only if the player has the Ban perm.)
+**d?kick** : Kick a member (works only if the player has the Kick perm.)
+**d?ban** : Ban a member (works only if the player has the Ban perm.)
 
-**m?shutdown** : Shuts down the bot (BOT Owner only)
-**m?purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
-**m?cat** : Something cute is going on here
+**d?shutdown** : Shuts down the bot (BOT Owner only)
+**d?purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
+**d?cat** : Something cute is going on here
 """)
     await ctx.author.send("""
-**m?play** : Play a song
-**m?stop** : Stops the track
-**m?queue** : See the following tracks
-**m?skip** : Plays the next song
-**m?pause** : Pause the track
-**m?resume** : Unpause the track
-**m?join** : Join a voice channel""")
+**d?play** : Play a song
+**d?stop** : Stops the track
+**d?queue** : See the following tracks
+**d?skip** : Plays the next song
+**d?pause** : Pause the track
+**d?resume** : Unpause the track
+**d?join** : Join a voice channel""")
     await ctx.send(f':mailbox_with_mail:  | ** {ctx.author.name} ** , check your DMs!')
 
   
@@ -132,7 +132,7 @@ async def help(ctx):
 @bot.listen()
 async def on_message(message : discord.Message):
     if bot.user.mentioned_in(message):
-        await message.channel.send(':sleeping: | You woke me up :( . My prefix is `m?` , for a list of commands type `m?help`', delete_after=10)
+        await message.channel.send(':sleeping: | You woke me up :( . My prefix is `d?` , for a list of commands type `d?help`', delete_after=10)
 
 @bot.listen()
 async def on_command_error(ctx, error):
@@ -224,14 +224,14 @@ async def avatar(ctx, member: discord.Member=None):
 
 @bot.listen()
 async def on_message(message):
-    if message.content.lower() == 'm?support' and message.author != bot.user:
-        await message.channel.send('The support server is: https://discord.gg/FTkKFGA')
+    if message.content.lower() == 'd?support' and message.author != bot.user:
+        await message.channel.send('The support server is: https://discord.gg/ETM45x7')
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
 async def invite(ctx):
     """Gives you the BOT invite link."""
-    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=434766536826290177&permissions=8&scope=bot")
+    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=447454680079925248&permissions=8&scope=bot")
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
@@ -361,7 +361,7 @@ async def botinfo(ctx):
     em.add_field(name="Prefix", value=ctx.bot.command_prefix, inline=True)
     em.add_field(name="Made with", value='Python 3.6.5', inline=True)
     em.add_field(name="Tag:", value=ctx.me.discriminator, inline=True)
-    em.add_field(name="Creator", value='<@320887181516210177>', inline=True)
+    em.add_field(name="Creator", value='<@435036289193213953>', inline=True)
     em.add_field(name="Created at", value=ctx.bot.user.created_at, inline=True)
     em.set_thumbnail(url=ctx.me.avatar_url)
     msg = await ctx.send(embed=em)
@@ -381,7 +381,7 @@ async def binfo(ctx):
     em.add_field(name="Prefix", value=ctx.bot.command_prefix, inline=True)
     em.add_field(name="Made with", value='Python 3.6.5', inline=True)
     em.add_field(name="Tag:", value=ctx.me.discriminator, inline=True)
-    em.add_field(name="Creator", value='<@320887181516210177>', inline=True)
+    em.add_field(name="Creator", value='<@435036289193213953>', inline=True)
     em.add_field(name="Created at", value=ctx.bot.user.created_at, inline=True)
     em.set_thumbnail(url=ctx.me.avatar_url)
     msg = await ctx.send(embed=em)
