@@ -231,7 +231,7 @@ async def on_message(message):
 @bot.command()
 async def invite(ctx):
     """Gives you the BOT invite link."""
-    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=447454680079925248&permissions=8&scope=bot")
+    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=467364537734266881&permissions=8&scope=bot")
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
