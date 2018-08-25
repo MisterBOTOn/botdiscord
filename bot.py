@@ -225,13 +225,13 @@ async def avatar(ctx, member: discord.Member=None):
 @bot.listen()
 async def on_message(message):
     if message.content.lower() == 'd?support' and message.author != bot.user:
-        await message.channel.send('The support server is: https://discord.gg/ETM45x7')
+        await message.channel.send('The support server is: https://discord.gg/9tckkF4')
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
 async def invite(ctx):
     """Gives you the BOT invite link."""
-    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=467364537734266881&permissions=8&scope=bot")
+    await ctx.send("Invite the BOT here: https://discordapp.com/api/oauth2/authorize?client_id=482856239202566145&permissions=8&scope=bot")
 
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
